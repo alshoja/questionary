@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Card, Form, Container, Row, Col } from "react-bootstrap";
+import TextEditor from "components/TextEditor";
 
 function User() {
   const [answers, setAnswers] = useState([]);
@@ -38,12 +39,7 @@ function User() {
                     <Col md="12">
                       <Form.Group>
                         <label>Question</label>
-                        <Form.Control
-                          cols="80"
-                          placeholder="Enter your question here"
-                          rows="4"
-                          as="textarea"
-                        ></Form.Control>
+                        <TextEditor />
                       </Form.Group>
                     </Col>
                   </Row>
@@ -113,11 +109,7 @@ function User() {
                     <Col md="12">
                       <Form.Group>
                         <label>Answer Explanation</label>
-                        <Form.Control
-                          as="textarea"
-                          rows="3"
-                          placeholder="Enter explanation"
-                        ></Form.Control>
+                        <TextEditor />
                       </Form.Group>
                     </Col>
                   </Row>
